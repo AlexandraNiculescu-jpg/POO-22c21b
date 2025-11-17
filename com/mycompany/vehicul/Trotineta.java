@@ -40,3 +40,22 @@ public class Trotineta extends Vehicul implements Reincarcabil{
        System.out.println("Perioada de incarcare="+capacitateBaterie/2);
     }
 }
+
+public class TestTrotinete {
+    public static void main(String[] args) {
+        
+        Trotineta t1 = new Trotineta();
+        
+        Trotineta t2 = new Trotineta("Xiaomi", 1500.5f, 80, (byte) 60);
+        
+        Trotineta t3 = new Trotineta(t2);
+        
+        System.out.println(t1);
+        System.out.println(t2);
+        System.out.println(t3);
+        
+        t1.reincarca();
+        t2.reincarca();
+        t3.reincarca();
+    }
+}
