@@ -48,6 +48,9 @@ public class MainVehicul {
         e2.reincarca();
         System.out.println("Electrica 3 " + e3);
         e3.reincarca();
+
+
+        System.out.println("Electrica 3 " + e3);
         
     }
     
