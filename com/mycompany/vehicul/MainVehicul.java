@@ -51,6 +51,15 @@ public class MainVehicul {
 
 
         System.out.println("Electrica 3 " + e3);
+
+        t1 = new Trotineta();
+        t2 = new Trotineta("Xiaomi", 1500.5f, 80, (byte) 60);
+        t3 = new Trotineta(t2);
+        
+        System.out.println("Trotineta 1: " + t1);
+        System.out.println("Trotineta 2: " + t2);
+        System.out.println("Trotineta 3: " + t3);
+    
         
     }
     
