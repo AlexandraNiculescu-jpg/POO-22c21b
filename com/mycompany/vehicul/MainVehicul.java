@@ -172,8 +172,8 @@ public class MainVehicul {
             item.afiseazaDupaPret(1000f, 100000f);
         }
 
-                //Cod Isaia George---
-        Trotineta[] trotinete = new Trotineta[5];
+        //Cod Isaia George---
+        Object[] trotinete = new Trotineta[5];
         trotinete[0] = new Trotineta("Xiaomi", 2000.0f, 300, (byte)20);
         trotinete[1] = new Trotineta("Samsung", 2500.0f, 600, (byte)50);
         trotinete[2] = new Trotineta("Razer", 1500.0f, 250, (byte)15);
@@ -185,10 +185,14 @@ public class MainVehicul {
         float pret = sc.nextFloat();
         System.out.println("Introduceti maxim capacitate baterie");
         int capacitate = sc.nextInt();
-        for(Trotineta tr : trotinete){
-            if(tr.verificaPretMaiMic(pret) && tr.verificaCapacitateMaiMic(capacitate)){
-                System.out.println(tr);
+        for(Object tr : trotinete){
+            if(tr instanceof Trotineta){
+                Trotineta vr = (Trotineta) tr;
+                if(vr.verificaPretMaiMic(pret) && vr.verificaCapacitateMaiMic(capacitate)){
+                    System.out.println(tr);
+                }
             }
+
         }
         //Cod Isaia George ^
 
