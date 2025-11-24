@@ -29,10 +29,31 @@ public class Trotineta extends Vehicul implements Reincarcabil{
         this.capacitateBaterie=other.capacitateBaterie;
         this.autonomieAcumulator=other.autonomieAcumulator;
     }
+
+    //Dragaescu Cosmin
+    public static void pretmaimic(Trotineta[] v, float pretMaxim) {
+        System.out.println("Trotinete cu pret < " + pretMaxim + ":");
+
+        for (int i = 0; i < v.length; i++) {
+            if ( v[i].getPret() < pretMaxim) {
+                System.out.println(v[i]);
+            }
+        }
+    }
+    public static void autonomieminima(Trotineta[] v, byte autonomieMinima) {
+        System.out.println("Trotinete cu autonomie >= " + autonomieMinima + ":");
+
+        for (int i = 0; i < v.length; i++) {
+            if (v[i].autonomieAcumulator >= autonomieMinima) {
+                System.out.println(v[i]);
+            }
+        }
+    }
+
     
     @Override
     public String toString(){
-        return super.toString()+" capacitate baterie"+ capacitateBaterie+ "autonomie acumulator="+ autonomieAcumulator;
+        return super.toString()+" capacitate baterie "+capacitateBaterie+ " autonomie acumulator= "+ autonomieAcumulator;
     }
     
     @Override
