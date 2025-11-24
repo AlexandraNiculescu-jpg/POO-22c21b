@@ -191,6 +191,28 @@ public class MainVehicul {
             }
         }
         //Cod Isaia George ^
+
+// Cod Sumurduc Aurelian-Andrei
+            Vehicul[] vector1 = new Vehicul[3];
+            vector1[0] = new Vehicul();
+            vector1[1] = new Vehicul("Toyota", 2999.99f);
+            Vehicul alt1 = new Vehicul("Dacia", 1999.99f);
+            vector1[2] = new Vehicul(alt1);
+            System.out.println(vector1[0]);
+            System.out.println(vector1[1]);
+            System.out.println(vector1[2]);
+
+
+            Trotineta[] vector2 = new Trotineta[3];
+            vector2[0] = new Trotineta();
+            vector2[1] = new Trotineta("Samsung", 399.99f,20, (byte) 50);
+            Trotineta alt1 = new Trotineta("SteelSeries", 249.99f, 22, (byte) 40);
+            vector2[2] = new Trotineta(alt1);
+            System.out.println(vector2[0]);
+            System.out.println(vector2[1]);
+            System.out.println(vector2[2]);
+
+// Cod Sumurduc Aurelian-Andrei
         
     }
     

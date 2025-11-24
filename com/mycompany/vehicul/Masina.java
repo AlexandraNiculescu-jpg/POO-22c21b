@@ -27,4 +27,12 @@ public class Masina extends Vehicul {
     public String toString(){
         return super.toString()+" viteza maxima= "+vitezaMaxima;
     }
+            //Cod Sumurduc Aurelian-Andrei
+    public void Pret_diferit_de_o_valoare(float pret) {
+        Vehicul a = (Vehicul) this;
+        if(a.pret != pret) {
+            System.out.println(a.marca + " are pret diferit de: " + pret);
+        }
+    }
+//Cod Sumurduc Aurelian-Andrei
 }
