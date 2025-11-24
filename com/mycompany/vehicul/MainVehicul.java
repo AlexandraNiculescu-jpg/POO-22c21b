@@ -94,22 +94,20 @@ public class MainVehicul {
 
 //cod Mihaluta Andrei
 
-       Vehicul[] masini = {
-                new Vehicul("BMW", 30000),
-                new Vehicul("MERCEDES", 80000),
-                new Vehicul("Audi", 45000),
-                new Vehicul("Renault", 28000),
-                new Vehicul("VOLKSWAGEN", 60000)
-        };
+    public class Main {
+    public static void main(String[] args) {
 
-        String marcaInterzisa = "BMW";
-        float pretMaxim = 50000;
+        Object[] vector = new Object[5];
 
-        System.out.println("Vehicule permise:");
+        vector[0] = new Vehicul("BMW", 25000f);
+        vector[1] = new Vehicul("Audi", 15000f);
+        vector[2] = new Vehicul("Mercedes", 500f);
+        vector[3] = new Vehicul("Toyota", 800f);
+        vector[4] = new Vehicul();
 
-        for (Vehicul v : masini) {
-            if (!v.marca.equals(marcaInterzisa) && v.getPret() >= pretMinim) {
-                System.out.println(v);
+        for (int i = 0; i < vector.length; i++) {
+            Vehicul v = (Vehicul) vector[i];
+            System.out.println(v);
         }
     }
 }
