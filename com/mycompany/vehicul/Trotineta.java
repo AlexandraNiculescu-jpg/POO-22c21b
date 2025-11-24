@@ -83,13 +83,36 @@ public class Trotineta extends Vehicul implements Reincarcabil{
 
 //Cod Niculescu Alexandra-Christine
 
- public static void afiseazaMarcaAutonomie(Trotineta t) {
-        System.out.println("Marca = " + t.marca +
-                           ", autonomie acumulator = " + t.autonomieAcumulator);
+ public class Trotineta extends Vehicul implements Reincarcabil {
+    int capacitateBaterie;
+    byte autonomieAcumulator;
+
+    public Trotineta() {
+        super();
+        this.capacitateBaterie = 50;
+        this.autonomieAcumulator = 50;
     }
 
-public void afiseazaDetalii() {
-        System.out.println(this.toString());
+    public Trotineta(String marca, float pret, int capacitateBaterie, byte autonomieAcumulator) {
+        super(marca, pret);
+        this.capacitateBaterie = capacitateBaterie;
+        this.autonomieAcumulator = autonomieAcumulator;
+    }
+
+    public Trotineta(Trotineta other) {
+        super(other);
+        this.capacitateBaterie = other.capacitateBaterie;
+        this.autonomieAcumulator = other.autonomieAcumulator;
+    }
+
+  public static void verificaMarcaAutonomie(Trotineta t1, Trotineta t2) {
+        if (t1.marca.equals(t2.marca) &&
+            t1.autonomieAcumulator == t2.autonomieAcumulator) {
+
+            System.out.println("Trotinetele au aceeasi marca si autonomie.");
+        } else {
+            System.out.println("Trotinetele nu au aceeasi marca si autonomie.");
+        }
     }
 
 @Override
@@ -104,3 +127,4 @@ public void afiseazaDetalii() {
     public void reincarca() {
         System.out.println("Perioada de incarcare = " + capacitateBaterie / 2);
     }
+}
