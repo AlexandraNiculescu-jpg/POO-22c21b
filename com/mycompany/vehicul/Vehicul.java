@@ -59,4 +59,11 @@ public class Vehicul implements Reincarcabil{
             System.out.println(this);
         }
     }
+        //Cod Isaia George----
+    public boolean verificaPretMaiMic(float pret) {
+        if(this.pret < pret)
+            return true;
+        return false;
+    }
+    //Cod Isaia George ^
 }
