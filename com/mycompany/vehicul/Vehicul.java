@@ -27,6 +27,11 @@ public class Vehicul implements Reincarcabil{
     public Vehicul(Vehicul other){
         this.marca=other.marca;
         this.pret=other.pret;
+//getter David Dascalu
+         public float getPret() {
+        return pret;
+    }
+//getter David Dascalu
     }
     @Override
     public String toString(){
